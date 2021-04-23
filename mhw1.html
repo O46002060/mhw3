@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>mhw1</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Chango&family=Open+Sans:wght@300&display=swap" rel="stylesheet"> 
+        <link rel='stylesheet' href='mhw1.css'>
+        <script src="mhw3.js" defer="true"></script>
+        <body> 
+            <header>
+                <nav>
+                 <div id='logo'>
+                      <img src="icona.png">
+                 </div>
+                 <div id='links'>
+                     <a>Home</a>
+                     <a>Chirurgo</a>
+                     <a>Ospedale</a>
+                     <a>Reparto</a>
+                     <a>Accedi</a>
+                 </div>
+                 <div id='menu'>
+                     <div></div>
+                     <div></div>
+                     <div></div>
+                     <div></div>
+                     <div></div>
+                 </div>
+                </nav>
+                <div id='overlay'></div>
+                <h1>Surgeon's site</h1>
+            </header>
+            <section>
+                <div id='main'>
+                    <h1> Sito che dà informazioni su chirurghi.</h1>
+                    <p>Qui potrai avere informazioni riguardo alcuni chirurghi di diverse zone d'Italia e non solo</br>
+                    In particolare:</p>
+               <ul>
+                   <li><span class='elenco'>elenco dei <a>chirurghi</a> presenti nel sito</span></li>
+                   <li><span class='elenco'>elenco degli <a>ospedali</a> dove lavorano i chirurghi</span></li>
+                   <li><span class='elenco'>i <a>reparti</a> di appartenenza</span></li>
+                   <li><span class='elenco'>Potrai trovare <a>immagini</a> aderenti alla salute/cura</span></li>
+               </ul>
+               
+                <div id='image'>
+                    <h2>Chirurghi</h2>
+                    <div id='chirurgo'>
+                        <img src='img1.png'>
+                        <p>In questa sezione sarà possibile visualizzare l'elenco dei <b> chirurghi </b> presenti nel database,</br>
+                            con i relativi pazienti che hanno operato, e la sala operatoria in cui hanno operato.</br>
+                            <br><a> CHIRURGHI </a></p>
+                    </div>
+                    <h2>Ospedale</h2>
+                    <div id='ospedale'>
+                        <img src="img2.png"> <p>In questa sezione sarà possibile visualizzare l'elenco degli <b> ospedali </b> presenti nel database,
+                        con i relativi chirurghi in cui hanno e lavorano in quell'ospedale.</br>
+                        <br><a> OSPEDALI </a></p>
+                    </div>
+                    <h2>Reparti</h2>
+                    <div id='reparti'>
+                        <img src='img3.png'> <p>In questa sezione sarà possibile visualizzare l'elenco dei <b> reparti </b> presenti nel database,
+                        con i relativi chirurghi.</br>
+                        <br><a> REPARTI </a></p>
+                    </div>
+                
+                
+                <h2>Immagini da vedere</h2>
+                <div class='immagini'>
+                    <p>Ricerca di immagini aderenti alla salute/cura.</p>
+                </div>
+                <form>
+                    <label>Categoria: <input type='text' name = 'content' id ='content' placeholder="Inserisci una categoria"></label>
+                <input class="submit" type='submit' value='Cerca'>
+                <input class="submit1" type='submit' value='Cancella tutto'>
+                </form>
+                
+                <article id="album-view">
+			
+                </article>
+                <article id="modale" class="hidden"> 
+                
+                </article>
+                </div>
+            </div>
+            </section>
+            <footer>
+            <address>Di Bella Danilo O46002060</address>
+            <p>Progetto di Web Programming A.A. 2020/2021</p>
+        </footer>
+        </body>
+    </head>
+</html>
