@@ -216,8 +216,7 @@ const div1 = document.createElement("div");
     div3.appendChild(t3);
   }
 
-let key = '21266017-28ab85e2d83e8ca9d22a76cf0';
-// Aggiungo event listener al form1 per la RICERCA
+
 const form = document.querySelector('form');
 form.addEventListener('submit', search)
 
@@ -252,12 +251,9 @@ function tornaIndietro(event){
 
 function onJson(json) {
   console.log('JSON ricevuto');
-  // Stampiamo il JSON per capire quali attributi ci servono
   console.log(json);
-  // Svuotiamo la libreria
   const library = document.querySelector('#album-view');
   library.innerHTML = '';
-  // Leggi il numero di risultati
   let res = json.count;
   console.log(res);
   if(res > 50) res=30;
@@ -286,17 +282,11 @@ function onResponse(response) {
 }
 
 function apriModale(event) {
-	//creo un nuovo elemento img
 	const image = document.createElement('img');
-	//setto l'ID di questo img come immagine_post, a cui attribuisco alcune caratteristiche CSS
 	image.id = 'immagine_post';
-	//associo all'attributo src, l'src cliccato
 	image.src = event.currentTarget.src;
-	//appendo quest'immagine alla view modale
 	modale.appendChild(image);
-	//rendo la modale visibile
 	modale.classList.remove('hidden');
-	//blocco lo scroll della pagina
 	document.body.classList.add('no-scroll');
 }
 
@@ -305,18 +295,15 @@ function chiudiModale(event) {
 	console.log(event);
 	if(event.key === 'Escape')
 	{
-		//aggiungo la classe hidden 
 		modale.classList.add('hidden');
-		//prendo il riferimento dell'immagine dentro la modale
 		img = modale.querySelector('img');
-		//e la rimuovo 
 		img.remove();
-		//riabilito lo scroll
 		document.body.classList.remove('no-scroll');
 	}
 }
 
 window.addEventListener('keydown', chiudiModale);
+
     //footer
 
   const footer = document.createElement('footer');
