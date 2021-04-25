@@ -1,5 +1,7 @@
+
+//API key
 let key = '21266017-28ab85e2d83e8ca9d22a76cf0';
-// Aggiungo event listener al form1 per la RICERCA
+
 const form = document.querySelector('form');
 form.addEventListener('submit', search)
 
@@ -17,26 +19,12 @@ function search(event){
     alert("Inserisci il testo per cui effettuare la ricerca");
   }
 }
-/*
-function tornaIndietro(event){
-  event.preventDefault();
-  const a = document.querySelector('#album-view')
-  a.innerHTML='';
-  const b = event.currentTarget;
-  b.classList.remove('submit2')
-  b.classList.add('submit1');
-
-}
-*/
 
   function onJson_img(json) {
     console.log('JSON Img ricevuto');
-    // Stampiamo il JSON per capire quali attributi ci servono
     console.log(json);
-    // Svuotiamo la libreria
     const library = document.querySelector('#album-view');
     library.innerHTML = '';
-    // Leggi il numero di risultati
     let results = json.totalHits;
     if(results == 0)
     {
@@ -47,7 +35,6 @@ function tornaIndietro(event){
     }
     for(let i=0;i<results;i++){
     {
-      // Leggiamo info
       const doc = json.hits[i]
       console.log(doc)
         const immagine = doc.webformatURL;
@@ -58,28 +45,18 @@ function tornaIndietro(event){
       img.src = immagine;
       
       img.addEventListener('click', apriModale);
-   
-      // Aggiungiamo immagine e didascalia al div
       album.appendChild(img);
-     
-      // Aggiungiamo il div alla libreria
       library.appendChild(album);
     }
   }
   }
 
   function apriModale(event) {
-	//creo un nuovo elemento img
 	const image = document.createElement('img');
-	//setto l'ID di questo img come immagine_post, a cui attribuisco alcune caratteristiche CSS
 	image.id = 'immagine_post';
-	//associo all'attributo src, l'src cliccato
 	image.src = event.currentTarget.src;
-	//appendo quest'immagine alla view modale
 	modale.appendChild(image);
-	//rendo la modale visibile
 	modale.classList.remove('hidden');
-	//blocco lo scroll della pagina
 	document.body.classList.add('no-scroll');
 }
 
@@ -88,13 +65,9 @@ function chiudiModale(event) {
 	console.log(event);
 	if(event.key === 'Escape')
 	{
-		//aggiungo la classe hidden 
 		modale.classList.add('hidden');
-		//prendo il riferimento dell'immagine dentro la modale
 		img = modale.querySelector('img');
-		//e la rimuovo 
 		img.remove();
-		//riabilito lo scroll
 		document.body.classList.remove('no-scroll');
 	}
 }
